@@ -5,7 +5,7 @@ import './App.css';
 
 function App() {
   return (
-    <BrowserRouter basename="/react-typescript-api-filmes">
+    <BrowserRouter basename="/react-typescript-api-filmes/">
       <Routes>
         <Route path="/" element={<FilmList />} />
         <Route path="/films/:id" element={<FilmDetails />} />
