@@ -3,16 +3,16 @@ import { useParams, Link } from 'react-router-dom';
 import type { Film } from './Types/TypeFilm';
 
 export const FilmDetails = () => {
-    const { id } = useParams();
+    const { id } = useParams<{ id: string }>();
     const [film, setFilm] = useState<Film | null>(null);
 
     useEffect(() => {
         fetch(`https://ghibliapi.vercel.app/films/${id}`)
             .then(res => res.json())
-            .then(data => setFilm(data));
+            .then(data => setFilm(data)).catch(_err => alert('Erro ao carregar detalhes do filme.'));
     }, [id]);
 
-    if (!film) return <p className="text-center">Carregando detalhes...</p>;
+    if (!film) return <p className="text-center">Carregando detalhes do filme...</p>;
 
     return (
         <div className="min-h-screen bg-slate-50 py-12 px-4">
