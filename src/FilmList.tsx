@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useGetFilms } from "./Hook/UseEffect";
+import { useGetFilms } from "./hooks/UseEffect";
 
 export const FilmList = () => {
     const { films } = useGetFilms();
@@ -23,7 +23,7 @@ export const FilmList = () => {
                     {films.map((film, index) => (
                         <Link
                             to={`/films/${film.id}`}
-                            key={film.id}
+                            key={film.id || film.title}
                             className="animate-fade-in flex bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group overflow-hidden border border-slate-100 h-44"
                             style={{ animationDelay: `${index * 0.1}s` }}
                         >
