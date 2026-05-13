@@ -3,13 +3,13 @@ import type { Film } from '../Types/TypeFilm';
 
 export const useGetFilms = () => {
     const [films, setFilms] = useState<Film[]>([]);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         fetch('https://ghibliapi.vercel.app/films')
             .then(response => {
-                if (!response.ok) throw new Error('Erro ao carregar filmes');
+                if (!response.ok) throw new Error('Erro ao carregar filmes. Tente novamente mais tarde.');
                 return response.json();
             })
             .then((data: Film[]) => {
@@ -18,7 +18,7 @@ export const useGetFilms = () => {
                 const sortedFilms = data
                     .sort((a, b) => a.title.localeCompare(b.title))
                     .slice(0, 10);
-                
+
                 setFilms(sortedFilms);
                 setLoading(false);
             })
@@ -26,7 +26,8 @@ export const useGetFilms = () => {
                 setError(err.message);
                 setLoading(false);
             });
-    }, []);
+   }, []);
+
 
     return { films, loading, error };
 };
