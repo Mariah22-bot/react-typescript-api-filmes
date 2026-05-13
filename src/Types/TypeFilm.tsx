@@ -7,6 +7,6 @@ export interface Film {
     producer: string;
     release_date: string;
     rt_score: string;
-    image: string;      // Banner do filme
-    movie_banner: string; // Imagem de fundo
+    image: string;    
+    movie_banner: string;
 }
