@@ -4,6 +4,29 @@ Este projeto é uma aplicação web desenvolvida com **React**, **TypeScript** e
 
 ---
 
+## 🛠️ Exemplo de Uso da API
+Para garantir a transparência sobre como a aplicação interage com os dados, a aplicação realiza chamadas ao endpoint de filmes (/films). Ao interagir com a plataforma, o usuário recebe dados estruturados como no exemplo abaixo:
+
+Endpoint utilizado: [https://ghibliapi.vercel.app/films](https://ghibliapi.vercel.app/films)
+
+Estrutura de resposta esperada:
+[
+  {
+    "id": "2baf70d1-42bb-4437-b551-e5b5a87abe24",
+    "title": "Castle in the Sky",
+    "original_title": "天空の城ラピュタ",
+    "description": "The orphan Sheeta inherited a mysterious crystal...",
+    "director": "Hayao Miyazaki",
+    "producer": "Isao Takahata",
+    "release_date": "1986",
+    "rt_score": "95",
+    "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/npOnzAbLh6VOIu3naU5QaEcTepo.jpg",      
+    "movie_banner": "https://image.tmdb.org/t/p/w533_and_h300_bestv2/3cyjYtLWCBE1uvWINHFsFnE8LUK.jpg"
+  }
+]
+
+---
+
 ## 🚀 Sobre o Projeto
 A aplicação foi construída como um desafio técnico para consolidar conceitos de:
 * **Consumo de APIs REST** com tratamento de estados (loading/error).
