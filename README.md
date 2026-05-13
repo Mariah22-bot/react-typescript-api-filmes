@@ -9,7 +9,7 @@ A aplicação foi construída como um desafio técnico para consolidar conceitos
 * **Consumo de APIs REST** com tratamento de estados (loading/error).
 * **Gerenciamento de Rotas** com `react-router-dom`.
 * **Tipagem Estrita** para garantir a integridade dos dados da API.
-* **UI Dinâmica** utilizando Tailwind CSS (v4) com efeitos de Glassmorphism.
+* **UI Dinâmica** utilizando Tailwind CSS (v4.2.4) com efeitos de Glassmorphism.
 
 ---
 
@@ -36,7 +36,7 @@ A aplicação foi construída como um desafio técnico para consolidar conceitos
 ## 📋 Requisitos do Desafio
 Para a execução deste projeto, foram seguidos os seguintes critérios:
 1.  **Endpoint:** `https://ghibliapi.vercel.app/films`
-2.  **Ordenação:** Método `.sort()` aplicado para garantir a ordem alfabética de A-Z.
+2.  **Ordenação:** Para facilitar a navegação, utilizei o método `.sort()`. Este método organiza os elementos do array de filmes em ordem alfabética (A-Z), comparando as strings dos títulos e garantindo que a lista seja exibida de forma padronizada para o usuário.
 3.  **Filtro:** Limitação de exibição para os 10 primeiros resultados.
 4.  **Tipagem:** Interface `Film` definida para cobrir todos os campos da API.
 
@@ -62,11 +62,15 @@ Se você quiser clonar e testar este projeto localmente:
    ```bash
    git clone https://github.com/seu-usuario/nome-do-repositorio.git
    ```
-2. **Instale as dependências:**
+2. **Entre na pasta do projeto:**
+   ```bash
+   cd nome-do-repositorio
+   ```
+3. **Instale as dependências:**
    ```bash
    npm install
    ```
-3. **Inicie o servidor de desenvolvimento:**
+4. **Inicie o servidor de desenvolvimento:**
    ```bash
    npm run dev
    ```
