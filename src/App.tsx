@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { FilmList } from './useState';
+import { FilmList } from './FilmList';
 import { FilmDetails } from './Details';
-import './App.css';
+import.meta.env;
 
 function App() {
   return (
-    <BrowserRouter basename="/react-typescript-api-filmes/">
+    <BrowserRouter basename={import.meta.env.BASE_URL || '/'}>
       <Routes>
         <Route path="/" element={<FilmList />} />
         <Route path="/films/:id" element={<FilmDetails />} />
